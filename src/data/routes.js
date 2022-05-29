@@ -21,6 +21,21 @@ export const ROUTES_SOURCE = [
     meta: { title: "Our Team" }
   },
   {
+    path: "/work",
+    label: "work",
+    name: "work",
+    component: () => import("@/views/work/index.vue"),
+    meta: { title: "Our Work" }
+  },
+  {
+    path: "/work/:id",
+    label: "project",
+    name: "project",
+    component: () => import("@/views/work/project/index.vue"),
+    meta: { title: "World Vision Canada" },
+    hidden: true
+  },
+  {
     path: "/contact",
     label: "contact",
     name: "contact",
