@@ -73,7 +73,7 @@ const members = [
     <h2 class="mx-auto max-w-lg text-center">
       A statement about the quality and traits of the team.
     </h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 mt-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 mt-12">
       <div v-for="(member, index) in members" :key="index">
         <div class="bg-awm-placeholder h-64 w-full mb-4" />
         <h4 class="">{{ member.name }}</h4>

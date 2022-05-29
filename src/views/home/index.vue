@@ -31,7 +31,7 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non etiam
       adipiscing tincidunt velit, nulla ut eu metus. Volutpat feugiat volutpat.
     </p>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
       <div v-for="(area, index) in areas" :key="index">
         <img
           src="@/assets/images/expert.png"
@@ -39,7 +39,7 @@
           class="mb-4 w-full object-cover"
         />
         <p class="mb-1 text-lg">0{{ index + 1 }}</p>
-        <h4>{{ area.title }}</h4>
+        <h4 class="text-xl">{{ area.title }}</h4>
       </div>
     </div>
     <div class="todo">add colors</div>

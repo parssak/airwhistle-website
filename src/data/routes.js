@@ -36,6 +36,13 @@ export const ROUTES_SOURCE = [
     hidden: true
   },
   {
+    path: "/kentico",
+    label: "kentico",
+    name: "kentico",
+    component: () => import("@/views/kentico/index.vue"),
+    meta: { title: "Kentico CMS & EMS Development" }
+  },
+  {
     path: "/contact",
     label: "contact",
     name: "contact",

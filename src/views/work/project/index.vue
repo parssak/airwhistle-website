@@ -25,7 +25,7 @@ const awards = [
 
 <template>
   <Header to="#" />
-  <Container class="py-4 pb-4 sm:py-0">
+  <Container class="pb-4">
     <div class="grid lg:grid-cols-4 gap-6 lg:gap-24">
       <div>
         <h4 class="mb-1">Scope</h4>

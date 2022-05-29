@@ -31,7 +31,7 @@ h4 {
 }
 
 p {
-  @apply text-base text-awm-navy leading-relaxed;
+  @apply text-lg text-awm-navy leading-relaxed;
 }
 
 ul:not(.unstyled) {
