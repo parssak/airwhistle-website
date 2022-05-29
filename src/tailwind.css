@@ -80,9 +80,9 @@ select {
 }
 
 .btn {
-  @apply w-max inline-flex items-center border border-transparent font-medium shadow-sm transition
-        text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent;
+  @apply w-max inline-flex items-center border-2 font-medium transition
+        text-white focus:outline-none focus:ring-2 
+        focus:ring-offset-2 focus:ring-accent uppercase tracking-wide;
 }
 
 .btn-dark {
@@ -90,27 +90,27 @@ select {
 }
 
 .btn-light {
-  @apply text-accent bg-accent-light hover:bg-accent-light_hover;
+  @apply text-white;
 }
 
 .btn-xs {
-  @apply px-2.5 py-1.5 text-xs rounded;
+  @apply px-2.5 py-1.5 text-xs rounded-full;
 }
 
 .btn-sm {
-  @apply px-3 py-2 text-sm leading-4 rounded-md;
+  @apply px-3 py-2 text-sm leading-4 rounded-full;
 }
 
 .btn-md {
-  @apply px-4 py-2 text-sm rounded-md;
+  @apply px-4 py-2 text-sm rounded-full;
 }
 
 .btn-lg {
-  @apply px-4 py-2 text-base rounded-md;
+  @apply px-4 py-2 text-base rounded-full;
 }
 
 .btn-xl {
-  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-md;
+  @apply text-base px-8 py-3 md:text-lg rounded-full;
 }
 
 /* #endregion - Inputs -  */

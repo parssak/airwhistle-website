@@ -12,5 +12,19 @@ export const ROUTES_SOURCE = [
     name: "about",
     component: () => import("@/views/about/index.vue"),
     meta: { title: "Who We Are" }
+  },
+  {
+    path: "/team",
+    label: "team",
+    name: "team",
+    component: () => import("@/views/team/index.vue"),
+    meta: { title: "Our Team" }
+  },
+  {
+    path: "/contact",
+    label: "contact",
+    name: "contact",
+    component: () => import("@/views/contact/index.vue"),
+    meta: { title: "Get in Touch" }
   }
 ];

@@ -10,13 +10,13 @@ const { flipped, leftClass, rightClass } = defineProps({
   <div class="md:pt-6 pb-12 lg:pt-12">
     <main class="lg:relative">
       <div
-        :class="`${leftClass} mx-auto max-w-7xl w-full py-12 lg:py-32 lg:flex ${
+        :class="`${leftClass} mx-auto max-w-7xl py-12 lg:py-32 lg:flex ${
           flipped && 'justify-end'
         }
       `"
       >
         <div
-          class="px-4 lg:w-1/2 sm:px-12"
+          class="lg:w-1/2 px-4 sm:px-6 md:px-12 xl:px-6"
           :class="flipped ? 'xl:pl-24' : 'xl:pr-24'"
         >
           <slot name="left"></slot>

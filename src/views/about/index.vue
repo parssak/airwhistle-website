@@ -37,7 +37,8 @@ const partners = Array(12).fill(0);
         class="
           mt-8
           grid
-          md:grid-cols-2
+          sm:grid-cols-2
+          md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-6
           gap-x-4 gap-y-6
