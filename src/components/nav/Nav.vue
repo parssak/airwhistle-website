@@ -1,5 +1,8 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
+  <Popover
+    class="sticky left-0 top-0 w-full z-20 transition-all"
+    :class="top ? '' : 'bg-white'"
+  >
     <div
       v-if="showAnnouncement"
       class="
@@ -35,35 +38,35 @@
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
           <router-link :to="{ name: 'home' }">
-            <span class="sr-only">Company Name</span>
+            <span class="sr-only">Air Whistle Media</span>
             <div class="flex items-center">
               <img
-                class="h-9 w-auto flex items-center"
+                class="h-7 w-auto flex items-center"
                 src="@/assets/logo.svg"
-                alt="Company Name"
+                alt="Air Whistle Media"
               />
             </div>
           </router-link>
         </div>
-        <div class="-mr-2 -my-2 md:hidden">
+        <div class="-mr-2 -my-2">
           <PopoverButton
             class="
-              rounded-md
+              rounded-full
               p-2
               inline-flex
               items-center
               justify-center
               text-white
-              hover:text-gray-500
               transition
-              hover:bg-white
+              bg-awm-red
+              hover:bg-awm-red-75
             "
           >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+            <MenuIcon class="h-6 w-6 text-white" aria-hidden="true" />
           </PopoverButton>
         </div>
-        <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
+        <!-- <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
           <NavItem
             v-for="item in navigation"
             :route="item"
@@ -73,7 +76,7 @@
           >
             {{ item.label }}
           </NavItem>
-        </PopoverGroup>
+        </PopoverGroup> -->
       </div>
     </div>
 
@@ -96,7 +99,6 @@
           transition
           transform
           origin-top-right
-          md:hidden
         "
       >
         <div
@@ -114,7 +116,7 @@
                 <img
                   class="h-7 w-auto"
                   src="@/assets/logo.svg"
-                  alt="Company name"
+                  alt="Air Whistle Media"
                 />
               </router-link>
               <div class="-mr-2">
@@ -183,7 +185,19 @@ export default {
   },
   data() {
     // Set showAnnouncement to true if you want to preview the alert
-    return { showAnnouncement: true, top: true };
+    return { showAnnouncement: false, top: true };
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      // if (
+      //   this.$route.name !== "aftermarket/oasis" &&
+      //   this.$route.name !== "home"
+      // ) {
+      //   this.top = false;
+      // } else {
+      //   }
+      this.top = window.scrollY < 50;
+    });
   },
   watch: {
     // listen for route change

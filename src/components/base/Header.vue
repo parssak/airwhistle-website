@@ -1,27 +1,18 @@
 <template>
-  <div class="relative">
-    <div class="absolute inset-0">
-      <img
-        class="w-full h-full object-cover"
-        src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-        alt=""
-      />
-      <div
-        class="absolute inset-0 bg-accent mix-blend-multiply"
-        aria-hidden="true"
-      />
-    </div>
-    <Container>
-      <div class="py-8">
-        <h1 class="text-white capitalize">
-          {{ title ?? $route.meta.title }}
-        </h1>
-        <p v-if="description" class="mt-6 text-xl text-indigo-100 max-w-3xl">
-          {{ description }}
-        </p>
+  <section class="px-4 sm:px-6">
+    <div class="max-w-full lg:max-w-7xl lg:mx-auto">
+      <div class="relative md:p-6 w-full">
+        <div class="pt-12 md:pt-24 pb-8 border-b-2 border-awm-red">
+          <h1 class="capitalize">
+            {{ title ?? $route.meta.title }}
+          </h1>
+          <p v-if="description" class="mt-6 text-xl text-indigo-100 max-w-3xl">
+            {{ description }}
+          </p>
+        </div>
       </div>
-    </Container>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script setup>

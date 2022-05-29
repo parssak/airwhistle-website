@@ -1,5 +1,5 @@
 {
-  "name": "template-website",
+  "name": "airwhistle-website",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",

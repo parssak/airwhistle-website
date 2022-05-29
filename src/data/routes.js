@@ -11,6 +11,6 @@ export const ROUTES_SOURCE = [
     label: "about",
     name: "about",
     component: () => import("@/views/about/index.vue"),
-    meta: { title: "About" }
+    meta: { title: "Who We Are" }
   }
 ];
