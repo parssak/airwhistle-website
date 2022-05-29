@@ -23,12 +23,7 @@
         <span class="block text-accent">Start your free trial today.</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <Button
-          as="router-link"
-          class="btn btn-xl btn-dark"
-          :to="{ name: 'contact' }"
-          >Get Started</Button
-        >
+        <Button class="btn btn-xl btn-dark">Get Started</Button>
       </div>
     </div>
   </div>

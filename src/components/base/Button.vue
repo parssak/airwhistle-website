@@ -13,12 +13,20 @@ export default {
 
   setup(props, { slots }) {
     return () =>
-      h(props.as, [
-        h("span", slots.default?.()),
-        h("img", {
-          src: iconSrc(),
-        }),
-      ]);
+      h(
+        props.as,
+        {
+          to: {
+            name: "contact",
+          },
+        },
+        [
+          h("span", slots.default?.()),
+          h("img", {
+            src: iconSrc(),
+          }),
+        ]
+      );
   },
 };
 </script>

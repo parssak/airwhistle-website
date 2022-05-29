@@ -3,6 +3,7 @@ import Header from "@/components/base/Header.vue";
 import Container from "@/components/layouts/Container.vue";
 import FullSplit from "@/components/layouts/FullSplit.vue";
 import Hr from "../../components/layouts/Hr.vue";
+import Button from "@/components/base/Button.vue";
 
 const members = [
   {
@@ -96,9 +97,9 @@ const members = [
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui
           euismod justo volutpat orci volutpat consequat nunc.
         </p>
-        <router-link :to="{ name: 'contact' }" class="btn btn-xl mt-8">
-          get in touch</router-link
-        >
+        <router-link :to="{ name: 'contact' }">
+          <Button class="btn btn-xl mt-8"> get in touch </Button>
+        </router-link>
       </div>
     </div>
   </Container>

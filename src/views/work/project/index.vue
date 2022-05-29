@@ -25,7 +25,7 @@ const awards = [
 
 <template>
   <Header to="#" />
-  <Container class="py-4 sm:py-0">
+  <Container class="py-4 pb-4 sm:py-0">
     <div class="grid lg:grid-cols-4 gap-6 lg:gap-24">
       <div>
         <h4 class="mb-1">Scope</h4>
@@ -93,7 +93,7 @@ const awards = [
   </Container>
 
   <Container>
-    <div class="px-12 py-12 bg-awm-red">
+    <div class="px-12 py-24 bg-awm-red">
       <div class="bg-red-awn text-center flex flex-col items-center">
         <img src="@/assets/icons/quote.svg" class="w-10 h-10" alt="" />
         <blockquote
@@ -110,7 +110,9 @@ const awards = [
         </p>
       </div>
     </div>
-    <div class="py-12 flex justify-around">
+    <div
+      class="py-12 flex items-center gap-6 flex-col md:flex-row justify-around"
+    >
       <Button class="btn btn-xl btn-flipped btn-dark">Previous Project</Button>
       <Button class="btn btn-xl btn-dark">Next Project</Button>
     </div>

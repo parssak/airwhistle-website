@@ -22,6 +22,8 @@ const { title, description } = defineProps({
               v-if="to"
               :href="to"
               as="a"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Visit the Website
             </Button>

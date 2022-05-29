@@ -80,7 +80,7 @@ select {
 }
 
 .btn {
-  @apply relative w-max inline-flex items-center border-2 border-white font-semibold transition-all
+  @apply relative cursor-pointer w-max text-center inline-flex items-center justify-center border-2 border-white font-semibold transition-all
         text-white focus:outline-none focus:ring-2 
         focus:ring-offset-2 focus:ring-awm-red uppercase tracking-wide 
         hover:bg-awm-red hover:border-awm-red hover:text-white;
@@ -111,21 +111,22 @@ select {
 }
 
 .btn-xl {
-  @apply text-base px-8 py-3 rounded-full;
+  @apply text-base px-8 py-3 rounded-full sm:min-w-[13rem];
 }
-.btn > span {
+
+.btn span {
   @apply transform translate-x-0 transition-all;
 }
 
-.btn:hover > span {
+.btn:hover span {
   @apply -translate-x-3;
 }
 
-.btn.btn-flipped:hover > span {
+.btn.btn-flipped:hover span {
   @apply translate-x-3;
 }
 
-.btn:not(:hover) > img {
+.btn:not(:hover) img {
   @apply opacity-0;
 }
 
@@ -134,7 +135,7 @@ select {
 }
 
 .btn.btn-flipped img {
-  @apply left-4 transform -scale-x-100 ;
+  @apply left-4 transform -scale-x-100;
 }
 
 /* #endregion - Inputs -  */

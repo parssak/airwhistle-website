@@ -1,6 +1,15 @@
 <template>
   <img
-    class="absolute -top-12 right-0 h-2/3 object-cover"
+    class="
+      absolute
+      -top-12
+      right-0
+      opacity-20
+      transition-all
+      xl:opacity-100
+      h-2/3
+      object-cover
+    "
     src="@/assets/icons/graphic-red.svg"
     alt=""
     aria-hidden="true"
@@ -8,13 +17,12 @@
   <Container>
     <h1 class="leading-tight">
       <span> Lorem ipsum dolor sit. </span> <br />
-      <span class="xl:text-awm-red max-w-2xl block"
+      <span class="text-awm-red max-w-2xl block"
         >Consect adipiscing onsect dipisct elit.</span
       >
     </h1>
-    <div class="todo">what to do with background on mobile? (red on red)</div>
     <div class="bg-awm-black h-96 mt-24 rounded aspect-video"></div>
-    <!-- <div class="todo">make this aspect ratio of video</div> -->
+    <div class="todo">make this aspect ratio of video</div>
   </Container>
 
   <Container>
