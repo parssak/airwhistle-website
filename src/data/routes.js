@@ -43,6 +43,13 @@ export const ROUTES_SOURCE = [
     meta: { title: "Kentico CMS & EMS Development" }
   },
   {
+    path: "/services",
+    label: "services",
+    name: "services",
+    component: () => import("@/views/services/index.vue"),
+    meta: { title: "Areas Of Expertise" }
+  },
+  {
     path: "/contact",
     label: "contact",
     name: "contact",

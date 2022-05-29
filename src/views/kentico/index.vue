@@ -65,7 +65,7 @@ const items = Array(12).fill("Lorem ipsum dolor sit amet, consectetur ");
         :key="index"
         class="flex items-start text-lg"
       >
-        <ChevronDoubleRightIcon class="h-5 w-5 mr-1 mt-0.5 text-awm-red" />
+        <ChevronDoubleRightIcon class="h-4 w-4 mr-2 mt-1 text-awm-red" />
 
         {{ item }}
       </li>

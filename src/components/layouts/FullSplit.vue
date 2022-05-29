@@ -7,10 +7,10 @@ const { flipped, leftClass, rightClass } = defineProps({
 </script>
 
 <template>
-  <div class="lg:py-12 overflow-hidden">
+  <div class="lg:py-4 overflow-hidden">
     <main class="lg:relative">
       <div
-        :class="`${leftClass} mx-auto max-w-7xl py-12 lg:py-32 lg:flex ${
+        :class="`${leftClass} mx-auto max-w-7xl py-8 lg:py-16 lg:flex ${
           flipped && 'justify-end'
         }
       `"
