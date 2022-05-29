@@ -7,10 +7,10 @@ const { flipped, leftClass, rightClass } = defineProps({
 </script>
 
 <template>
-  <div class="md:pt-6 pb-12">
+  <div class="md:pt-6 pb-12 lg:pt-12">
     <main class="lg:relative">
       <div
-        :class="`${leftClass} mx-auto max-w-7xl w-full py-12 md:pt-0 lg:py-32 lg:flex ${
+        :class="`${leftClass} mx-auto max-w-7xl w-full py-12 lg:py-32 lg:flex ${
           flipped && 'justify-end'
         }
       `"
@@ -35,7 +35,9 @@ const { flipped, leftClass, rightClass } = defineProps({
         
       `"
       >
-        <slot name="right"></slot>
+        <slot name="right">
+          <div class="w-full h-full bg-awm-placeholder"></div>
+        </slot>
       </div>
     </main>
   </div>
