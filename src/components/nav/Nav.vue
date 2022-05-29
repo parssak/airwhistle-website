@@ -202,11 +202,7 @@ export default {
   watch: {
     // listen for route change
     $route() {
-      if (this.$route.name !== "home") {
-        this.top = false;
-      } else {
-        this.top = window.scrollY < 50;
-      }
+      this.top = window.scrollY < 100;
     },
   },
   methods: {

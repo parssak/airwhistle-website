@@ -7,7 +7,7 @@ const { flipped, leftClass, rightClass } = defineProps({
 </script>
 
 <template>
-  <div class="md:pt-6 pb-12 lg:pt-12">
+  <div class="lg:pt-12 overflow-hidden">
     <main class="lg:relative">
       <div
         :class="`${leftClass} mx-auto max-w-7xl py-12 lg:py-32 lg:flex ${
@@ -30,7 +30,7 @@ const { flipped, leftClass, rightClass } = defineProps({
         h-72
         lg:h-96
         lg:absolute lg:inset-y-0 ${
-          flipped ? 'lg:left-0' : 'lg:right-0'
+          flipped ? 'lg:left-0 translate-x-[-0.5rem]' : 'lg:right-0 translate-x-[0.5rem]'
         } lg:w-1/2 lg:h-full
         
       `"

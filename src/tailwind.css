@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-semibold text-awm-navy mb-4;
+  @apply text-3xl md:text-4xl font-semibold text-awm-navy mb-4 !leading-tight;
 }
 
 h3 {
@@ -80,17 +80,18 @@ select {
 }
 
 .btn {
-  @apply w-max inline-flex items-center border-2 font-medium transition
+  @apply relative w-max inline-flex items-center border-2 border-white font-semibold transition-all
         text-white focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent uppercase tracking-wide;
+        focus:ring-offset-2 focus:ring-awm-red uppercase tracking-wide 
+        hover:bg-awm-red hover:border-awm-red hover:text-white;
 }
 
 .btn-dark {
-  @apply text-white bg-accent hover:bg-accent-hover focus:ring-accent;
+  @apply text-awm-navy border-awm-navy;
 }
 
 .btn-light {
-  @apply text-white;
+  @apply text-white border-white;
 }
 
 .btn-xs {
@@ -110,7 +111,30 @@ select {
 }
 
 .btn-xl {
-  @apply text-base px-8 py-3 md:text-lg rounded-full;
+  @apply text-base px-8 py-3 rounded-full;
+}
+.btn > span {
+  @apply transform translate-x-0 transition-all;
+}
+
+.btn:hover > span {
+  @apply -translate-x-3;
+}
+
+.btn.btn-flipped:hover > span {
+  @apply translate-x-3;
+}
+
+.btn:not(:hover) > img {
+  @apply opacity-0;
+}
+
+.btn img {
+  @apply absolute right-4 w-6 h-6 mb-0.5;
+}
+
+.btn.btn-flipped img {
+  @apply left-4 transform -scale-x-100 ;
 }
 
 /* #endregion - Inputs -  */
