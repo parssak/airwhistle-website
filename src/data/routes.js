@@ -4,21 +4,8 @@ export const ROUTES_SOURCE = [
     label: "home",
     name: "home",
     component: () => import("@/views/home/index.vue"),
-    meta: { title: "Home" }
-  },
-  {
-    path: "/about",
-    label: "about",
-    name: "about",
-    component: () => import("@/views/about/index.vue"),
-    meta: { title: "Who We Are" }
-  },
-  {
-    path: "/team",
-    label: "team",
-    name: "team",
-    component: () => import("@/views/team/index.vue"),
-    meta: { title: "Our Team" }
+    meta: { title: "Home" },
+    hidden: true
   },
   {
     path: "/work",
@@ -36,11 +23,18 @@ export const ROUTES_SOURCE = [
     hidden: true
   },
   {
-    path: "/kentico",
-    label: "kentico",
-    name: "kentico",
-    component: () => import("@/views/kentico/index.vue"),
-    meta: { title: "Kentico CMS & EMS Development" }
+    path: "/about",
+    label: "about",
+    name: "about",
+    component: () => import("@/views/about/index.vue"),
+    meta: { title: "Who We Are" }
+  },
+  {
+    path: "/team",
+    label: "team",
+    name: "team",
+    component: () => import("@/views/team/index.vue"),
+    meta: { title: "Our Team" }
   },
   {
     path: "/services",
@@ -56,6 +50,13 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/services/service/index.vue"),
     meta: { title: "Web Design + Development" },
     hidden: true
+  },
+  {
+    path: "/kentico",
+    label: "kentico",
+    name: "kentico",
+    component: () => import("@/views/kentico/index.vue"),
+    meta: { title: "Kentico CMS & EMS Development" }
   },
   {
     path: "/contact",

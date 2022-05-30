@@ -98,7 +98,7 @@ const members = [
           euismod justo volutpat orci volutpat consequat nunc.
         </p>
         <router-link :to="{ name: 'contact' }">
-          <Button class="btn btn-xl mt-8"> get in touch </Button>
+          <Button class="btn btn-xl mt-8 btn-hover-navy"> get in touch </Button>
         </router-link>
       </div>
     </div>

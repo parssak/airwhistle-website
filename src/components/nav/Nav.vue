@@ -3,6 +3,7 @@
     class="sticky left-0 top-0 w-full z-20 transition-all"
     :class="top ? '' : 'bg-white'"
   >
+    <!-- Announcement -->
     <div
       v-if="showAnnouncement"
       class="
@@ -26,6 +27,8 @@
         <XIcon class="w-6 h-6" />
       </button>
     </div>
+
+    <!-- Nav -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="
@@ -36,6 +39,7 @@
           md:justify-start md:space-x-5
         "
       >
+        <!-- Nav Logo -->
         <div class="flex justify-start items-center lg:w-0 flex-1">
           <router-link :to="{ name: 'home' }">
             <span class="sr-only">Air Whistle Media</span>
@@ -48,6 +52,7 @@
             </div>
           </router-link>
         </div>
+
         <div class="-mr-2 -my-2">
           <PopoverButton
             class="
@@ -63,30 +68,23 @@
             "
           >
             <span class="sr-only">Open menu</span>
-            <img src="@/assets/icons/menu.svg" class="h-9 w-9 text-white" aria-hidden="true" />
+            <img
+              src="@/assets/icons/menu.svg"
+              class="h-8 md:h-10 w-8 md:w-10 text-white"
+              aria-hidden="true"
+            />
           </PopoverButton>
         </div>
-        <!-- <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
-          <NavItem
-            v-for="item in navigation"
-            :route="item"
-            :path="item.path"
-            :key="item.label"
-            :dropdownItems="item.dropdownItems"
-          >
-            {{ item.label }}
-          </NavItem>
-        </PopoverGroup> -->
       </div>
     </div>
 
     <transition
-      enter-active-class="duration-200 ease-out"
-      enter-from-class="opacity-0 scale-95"
+      enter-active-class="duration-100 ease-out"
+      enter-from-class="opacity-0 scale-y-100"
       enter-to-class="opacity-100 scale-100"
       leave-active-class="duration-100 ease-in"
       leave-from-class="opacity-100 scale-100"
-      leave-to-class="opacity-0 scale-95"
+      leave-to-class="opacity-0 scale-y-100"
     >
       <PopoverPanel
         focus
@@ -95,63 +93,86 @@
           top-0
           inset-x-0
           z-10
-          p-2
           transition
           transform
-          origin-top-right
+          bg-awm-navy
+          shadow-lg
+          overflow-hidden
         "
       >
-        <div
+        <img
           class="
-            rounded-lg
-            shadow-lg
-            ring-1 ring-black ring-opacity-5
-            bg-gray-200
-            divide-y-2 divide-gray-50
+            absolute
+            -top-12
+            right-0
+            opacity-20
+            transition-all
+            lg:opacity-100
+            object-cover
+            h-[48rem]
           "
-        >
-          <div class="pt-5 pb-6 px-5">
-            <div class="flex items-center justify-between">
-              <router-link :to="{ name: 'home' }">
-                <img
-                  class="h-7 w-auto"
-                  src="@/assets/logo.svg"
-                  alt="Air Whistle Media"
-                />
-              </router-link>
-              <div class="-mr-2">
+          src="@/assets/icons/graphic-white.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <Container class="!py-0 md:-my-6 md:px-0">
+          <div class="">
+            <div class="py-4">
+              <div class="flex items-center justify-between">
+                <router-link :to="{ name: 'home' }">
+                  <img
+                    class="h-7 w-auto flex items-center"
+                    src="@/assets/icons/logo-white.svg"
+                    alt="Air Whistle Media"
+                  />
+                </router-link>
                 <PopoverButton
                   class="
                     rounded-md
-                    p-2
+                    p-1
                     inline-flex
                     items-center
                     justify-center
                     transition
-                    hover:bg-accent-lightest
                   "
                 >
                   <span class="sr-only">Close menu</span>
-                  <XIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+                  <XIcon
+                    class="
+                      h-7
+                      md:h-10
+                      w-7
+                      md:w-10
+                      text-awm-white
+                      lg:text-awm-red
+                    "
+                    aria-hidden="true"
+                  />
                 </PopoverButton>
               </div>
-            </div>
-            <div class="mt-6">
-              <nav class="grid">
-                <PopoverButton class="divide-y-2">
-                  <router-link
-                    v-for="item in navigation"
-                    :key="item.label"
-                    :to="{ name: item.name }"
-                    class="nav-item-mobile"
-                  >
-                    <span class="nav-item-mobile__text">{{ item.label }}</span>
-                  </router-link>
-                </PopoverButton>
-              </nav>
+              <div class="mt-6">
+                <nav class="grid">
+                  <PopoverButton class="space-y-2">
+                    <router-link
+                      v-for="item in navigation"
+                      :key="item.label"
+                      :to="{ name: item.name }"
+                      class="nav-item-mobile"
+                    >
+                      <span class="flex items-center text-3xl md:text-4xl lg:text-5xl">
+                        <span id="dash" aria-hidden="true" class="transition-all">—</span>
+                        <span id="label" class="transform transition-all">{{
+                          item.label
+                        }}</span>
+                      </span>
+                    </router-link>
+                  </PopoverButton>
+                </nav>
+              </div>
             </div>
           </div>
-        </div>
+        </Container>
       </PopoverPanel>
     </transition>
   </Popover>
@@ -168,6 +189,7 @@ import {
   PopoverPanel,
 } from "@headlessui/vue";
 import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
+import Container from "../layouts/Container.vue";
 
 export default {
   components: {
@@ -179,6 +201,7 @@ export default {
     XIcon,
     NavItem,
     ArrowRightIcon,
+    Container,
   },
   setup() {
     return { navigation };

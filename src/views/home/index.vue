@@ -7,7 +7,7 @@
       opacity-20
       transition-all
       lg:opacity-100
-      h-2/3
+      h-[48rem]
       object-cover
     "
     src="@/assets/icons/graphic-red.svg"
