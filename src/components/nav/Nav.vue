@@ -52,7 +52,7 @@
           <PopoverButton
             class="
               rounded-full
-              p-2
+              p-1
               inline-flex
               items-center
               justify-center
@@ -63,7 +63,7 @@
             "
           >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="h-6 w-6 text-white" aria-hidden="true" />
+            <img src="@/assets/icons/menu.svg" class="h-9 w-9 text-white" aria-hidden="true" />
           </PopoverButton>
         </div>
         <!-- <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">

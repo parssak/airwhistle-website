@@ -98,8 +98,9 @@ const areas = [
             {{ item }}
           </li>
         </ul>
-        <!-- Don't know where this should go -->
-        <router-link :to="{ name: 'home' }">
+        <router-link
+          :to="{ name: 'service', params: { id: 'web-design-development' } }"
+        >
           <Button class="btn btn-dark btn-xl mt-8"> Learn More </Button>
         </router-link>
       </template>

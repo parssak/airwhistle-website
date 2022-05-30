@@ -71,12 +71,13 @@ a.with-underline:hover::before {
   transform: translateY(-1px);
 }
 
-input[type="text"]:not(.phone-number),
-input[type="email"]:not(.text-base),
+input[type="text"],
+input[type="email"],
 input[type="number"],
+input[type="tel"],
 textarea,
 select {
-  @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full rounded-md;
+  @apply bg-transparent border-white border-0 border-b-2 focus:border-b-white focus:border-b-4 focus:ring-0 focus:bg-awm-red-75 focus:bg-opacity-50 transition-all focus:outline-none text-lg py-3 px-4 block w-full;
 }
 
 .btn {
@@ -92,6 +93,10 @@ select {
 
 .btn-light {
   @apply text-white border-white;
+}
+
+.btn-hover-navy {
+  @apply hover:bg-awm-navy;
 }
 
 .btn-xs {
@@ -212,4 +217,8 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 .todo::before {
   content: "TODO: ";
   @apply text-black font-medium -mr-1;
+}
+
+.form-label {
+  @apply text-white text-lg mb-2 font-medium;
 }

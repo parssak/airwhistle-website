@@ -6,7 +6,7 @@
       right-0
       opacity-20
       transition-all
-      xl:opacity-100
+      lg:opacity-100
       h-2/3
       object-cover
     "

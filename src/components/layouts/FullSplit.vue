@@ -1,8 +1,14 @@
 <script setup>
-const { flipped, leftClass, rightClass } = defineProps({
+const {
+  flipped,
+  leftClass,
+  rightClass,
+  spacing = true,
+} = defineProps({
   flipped: Boolean,
   leftClass: String,
   rightClass: String,
+  spacing: Boolean,
 });
 </script>
 
@@ -30,7 +36,9 @@ const { flipped, leftClass, rightClass } = defineProps({
         h-72
         lg:h-96
         lg:absolute lg:inset-y-0 ${
-          flipped ? 'lg:left-0 translate-x-[-0.5rem]' : 'lg:right-0 translate-x-[0.5rem]'
+          flipped
+            ? `lg:left-0 ${spacing && 'lg:translate-x-[-0.5rem]'}`
+            : `lg:right-0 ${spacing && 'lg:translate-x-[0.5rem]'}`
         } lg:w-1/2 lg:h-full
         
       `"

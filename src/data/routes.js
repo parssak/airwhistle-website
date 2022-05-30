@@ -50,10 +50,18 @@ export const ROUTES_SOURCE = [
     meta: { title: "Areas Of Expertise" }
   },
   {
+    path: "/services/:id",
+    label: "service",
+    name: "service",
+    component: () => import("@/views/services/service/index.vue"),
+    meta: { title: "Web Design + Development" },
+    hidden: true
+  },
+  {
     path: "/contact",
     label: "contact",
     name: "contact",
     component: () => import("@/views/contact/index.vue"),
-    meta: { title: "Get in Touch" }
+    meta: { title: "Contact Us" }
   }
 ];
