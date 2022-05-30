@@ -1,5 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-@import url("https://use.typekit.net/hdf2hwa.css%22");
+/* @import url("https://use.typekit.net/hdf2hwa.css%22"); */
+@import url("https://use.typekit.net/zqe1juh.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,11 +12,11 @@ body {
 
 /* #region - Typography -  */
 * {
-  font-family: "Elza Text", sans-serif;
+  font-family: "elza-text", sans-serif;
 }
 
 h1 {
-  @apply text-4xl font-semibold text-awm-navy sm:text-5xl md:text-6xl;
+  @apply text-4xl font-semibold text-awm-navy sm:text-5xl md:text-6xl !leading-tight;
 }
 
 h2 {
@@ -56,18 +57,17 @@ ul:not(.unstyled) li::before {
 /* #region - Inputs - */
 
 a.with-underline {
-  @apply relative transition w-max hover:text-accent;
+  @apply relative transition w-max;
 }
 
 a.with-underline::before {
-  @apply absolute bottom-0 left-0 w-full transition;
-  content: " ";
-  height: 1px;
+  @apply absolute bottom-0 left-0 w-full transition h-[2px];
+  content: "";
   transform: translateY(2px);
 }
 
 a.with-underline:hover::before {
-  @apply bg-accent;
+  @apply bg-awm-red;
   transform: translateY(-1px);
 }
 
@@ -77,22 +77,26 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-  @apply bg-transparent border-white border-0 border-b-2 focus:border-b-white focus:border-b-4 focus:ring-0 focus:bg-awm-red-75 focus:bg-opacity-50 transition-all focus:outline-none text-lg py-3 px-4 block w-full;
+  @apply bg-transparent border-awm-white border-0 border-b-2 focus:border-b-white focus:border-b-4 focus:ring-0 focus:bg-awm-red-75 focus:bg-opacity-50 transition-all focus:outline-none text-lg py-3 px-4 block w-full;
 }
 
 .btn {
-  @apply relative cursor-pointer w-max text-center inline-flex items-center justify-center border-2 border-white font-semibold transition-all
-        text-white focus:outline-none focus:ring-2 
+  @apply relative cursor-pointer w-max text-center inline-flex items-center justify-center border-2 border-awm-white font-semibold transition-all 
+        text-awm-white focus:outline-none focus:ring-2 
         focus:ring-offset-2 focus:ring-awm-red uppercase tracking-wide 
-        hover:bg-awm-red hover:border-awm-red hover:text-white;
+        hover:bg-awm-red hover:border-awm-red hover:text-awm-white;
 }
 
 .btn-dark {
   @apply text-awm-navy border-awm-navy;
 }
 
+.btn-red {
+  @apply text-awm-red border-awm-red;
+}
+
 .btn-light {
-  @apply text-white border-white;
+  @apply text-awm-white border-awm-white;
 }
 
 .btn-hover-navy {
@@ -136,7 +140,7 @@ select {
 }
 
 .btn img {
-  @apply absolute right-4 w-6 h-6 mb-0.5;
+  @apply transition absolute right-4 w-6 h-6 mb-0.5;
 }
 
 .btn.btn-flipped img {

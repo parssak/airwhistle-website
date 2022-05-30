@@ -20,6 +20,7 @@ const work = [
     name: "World Vision Canada",
     description: "Web Design",
     class: "bg-awm-green",
+    textClass: "text-white",
     image: getImageUrl("worldvision-kid.png"),
     routeName: "project",
     id: "world-vision-canada",

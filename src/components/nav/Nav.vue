@@ -98,6 +98,7 @@
           bg-awm-navy
           shadow-lg
           overflow-hidden
+          pt-1
         "
       >
         <img
@@ -161,8 +162,8 @@
                       class="nav-item-mobile"
                     >
                       <span class="flex items-center text-3xl md:text-4xl lg:text-5xl">
-                        <span id="dash" aria-hidden="true" class="transition-all">—</span>
-                        <span id="label" class="transform transition-all">{{
+                        <div id="dash" aria-hidden="true" class="transition-all duration-300 h-1.5 lg:h-2 w-6 lg:w-9 bg-awm-white" />
+                        <span id="label" class="transform transition-all duration-300">{{
                           item.label
                         }}</span>
                       </span>

@@ -90,8 +90,8 @@ const members = [
   </Container>
 
   <Container>
-    <div class="px-12 py-24 bg-awm-red">
-      <div class="bg-red-awn text-center flex flex-col items-center">
+    <div class="px-6 md:px-12 py-12 md:py-16 bg-awm-red">
+      <div class=" text-center flex flex-col items-center">
         <h2 class="text-white text-center">Join Us</h2>
         <p class="text-white max-w-xl text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui

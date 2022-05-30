@@ -93,8 +93,8 @@ const awards = [
   </Container>
 
   <Container>
-    <div class="px-12 py-24 bg-awm-red">
-      <div class="bg-red-awn text-center flex flex-col items-center">
+    <div class="px-6 md:px-12 py-12 md:py-16 bg-awm-red">
+      <div class="text-center flex flex-col items-center">
         <img src="@/assets/icons/quote.svg" class="w-10 h-10" alt="" />
         <blockquote
           class="text-white text-center text-xl max-w-3xl font-semibold mt-6"

@@ -1,96 +1,81 @@
 <template>
-  <footer class="bg-white" aria-labelledby="footer-heading">
+  <footer class="bg-awm-navy" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl mx-auto py-12 pb-8 px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8">
-        <router-link :to="{ name: 'home' }">
-          <img class="h-9 w-auto" src="@/assets/logo.svg" alt="Air Whistle Media" />
+    <Container class="!py-0">
+      <div
+        class="pt-12 pb-24 flex flex-col items-center border-b border-awm-white"
+        v-if="!isContactPage"
+      >
+        <h1 class="text-awm-white text-center md:text-5xl">
+          Ready To Work With Us? <br class="hidden md:block" />
+          We’d Love To Be Your Partner.
+        </h1>
+        <router-link :to="{ name: 'contact' }">
+          <Button class="btn btn-light btn-xl mt-12">Get in Touch</Button>
         </router-link>
-        <div class="grid sm:grid-cols-2 gap-8">
-          <div>
-            <h3
-              class="
-                mb-3
-                text-sm
-                font-semibold
-                uppercase
-                tracking-wider
-                text-gray-400
-              "
-            >
-              Navigation
-            </h3>
-            <div class="space-y-1">
-              <router-link
-                v-for="route in navigation"
-                :key="route.label"
-                class="
-                  block
-                  with-underline
-                  w-max
-                  transition
-                  hover:text-accent
-                  capitalize
-                "
-                :to="route.path"
-                >{{ route.label }}</router-link
-              >
-            </div>
-          </div>
-          <div>
-            <h3
-              class="
-                mb-3
-                text-sm
-                font-semibold
-                uppercase
-                tracking-wider
-                text-gray-400
-              "
-            >
-              Contact Us
-            </h3>
-            <div class="space-y-4">
-              <address class="not-italic">
-                Street <br />
-                City, Province POSTAL CODE
-              </address>
-              <a
-                href="tel:+19056379255"
-                class="block with-underline w-max hover:text-accent"
-                >Phone: xxx-xxx-xxxx
-              </a>
-              <a
-                href="mailto:info@email.com"
-                class="block with-underline w-max hover:text-accent"
-                >Email: info@email.com</a
-              >
-            </div>
-          </div>
-        </div>
       </div>
       <div
-        class="
-          mt-8
-          pt-8
-          border-t border-gray-200
-          md:flex md:items-center md:justify-between
-        "
+        class="flex justify-between gap-6 flex-col lg:flex-row lg:items-center"
+        :class="isContactPage ? 'py-4' : 'py-8'"
       >
-        <p class="text-base text-gray-400">
-          &copy; Copyright 2021 Air Whistle Media
-        </p>
+        <div class="flex flex-col gap-6 md:flex-row">
+          <address class="not-italic text-awm-white font-semibold">
+            10-5195 Harvester Road <br />
+            Burlington, ON L7L 6E9
+          </address>
+          <div>
+            <a
+              class="
+                block
+                with-underline
+                font-semibold
+                hover:text-awm-red-75
+                text-awm-white
+              "
+              href="tel:+905-639-9499"
+              >+905-639-9499</a
+            >
+            <a
+              class="
+                block
+                with-underline
+                font-semibold
+                hover:text-awm-red-75
+                text-awm-white
+              "
+              href="mailto:info@airwhistle.com"
+              >info@airwhistle.com</a
+            >
+          </div>
+        </div>
+        <div class="text-awm-white">
+          <a class="underline" href="#">Privacy</a>
+          |
+          <a class="underline" href="#">Terms & Conditions</a>
+        </div>
+        <div class="flex items-center">
+          <p class="font-semibold text-base text-awm-white">Air Whistle Media &copy; 2022</p>
+          <img src="@/assets/icons/mini-logo.svg" class="w-8 h-8 ml-2 mb-1" alt="">
+        </div>
       </div>
-    </div>
+    </Container>
   </footer>
 </template>
 
 <script>
 import { navigation } from "@/data";
+import Container from "../layouts/Container.vue";
+import Button from "./Button.vue";
 
 export default {
   setup() {
     return { navigation };
   },
+  computed: {
+    isContactPage() {
+      return this.$route.name === "contact";
+    },
+  },
+  components: { Container, Button },
 };
 </script>

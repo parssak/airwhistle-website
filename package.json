@@ -8,6 +8,7 @@
     "pages": "yarn build "
   },
   "dependencies": {
+    "swiper": "^8.1.6",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15"
   },
