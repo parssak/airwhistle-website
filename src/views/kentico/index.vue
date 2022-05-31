@@ -3,6 +3,7 @@ import Header from "@/components/base/Header.vue";
 import Container from "@/components/layouts/Container.vue";
 import FullSplit from "@/components/layouts/FullSplit.vue";
 import { ChevronDoubleRightIcon } from "@heroicons/vue/outline";
+import Carousel from "@/components/layouts/Carousel.vue";
 
 const items = Array(12).fill("Lorem ipsum dolor sit amet, consectetur ");
 </script>
@@ -40,9 +41,7 @@ const items = Array(12).fill("Lorem ipsum dolor sit amet, consectetur ");
     </template>
   </FullSplit>
 
-  <Container>
-    <div class="todo">carousel red</div>
-  </Container>
+  <Carousel red />
 
   <Container>
     <div class="mx-auto max-w-4xl">

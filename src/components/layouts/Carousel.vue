@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/outline";
@@ -8,6 +8,10 @@ import Button from "../base/Button.vue";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
+const { red } = defineProps({
+  red: Boolean,
+});
 
 const getImageURL = (name) => {
   return new URL(`../../assets/images/${name}`, import.meta.url).href;
@@ -79,7 +83,10 @@ const modules = [Pagination, Navigation];
       "
     />
 
-    <div class="bg-awm-navy absolute inset-0 bg-opacity-90"></div>
+    <div
+      class="absolute inset-0"
+      :class="red ? 'bg-awm-red bg-opacity-75' : 'bg-awm-navy bg-opacity-90'"
+    ></div>
     <section class="py-8 pl-4 sm:pl-6 relative">
       <div class="max-w-full lg:max-w-7xl lg:mx-auto">
         <div class="md:pl-6 w-full grid h-full lg:grid-cols-3 gap-8">
@@ -91,7 +98,11 @@ const modules = [Pagination, Navigation];
               volutpat.
             </p>
             <router-link :to="{ name: 'work' }">
-              <Button class="btn btn-xl btn-light mt-6">View all Work</Button>
+              <Button
+                class="btn btn-xl btn-light mt-6"
+                :class="red ? 'btn-hover-navy' : ''"
+                >View all Work</Button
+              >
             </router-link>
           </div>
           <div
@@ -128,7 +139,7 @@ const modules = [Pagination, Navigation];
             </swiper>
 
             <!-- Buttons -->
-            <div class="lg:mt-8 flex space-x-3 items-center">
+            <div class="mt-4 lg:mt-8 flex space-x-3 items-center">
               <button
                 class="
                   w-12
@@ -137,10 +148,14 @@ const modules = [Pagination, Navigation];
                   place-items-center
                   border-awm-white border-2
                   rounded-full
-                  hover:bg-awm-red hover:border-awm-red
                   transition
                   duration-200
                   z-10
+                "
+                :class="
+                  red
+                    ? 'hover:bg-awm-navy hover:border-awm-navy'
+                    : 'hover:bg-awm-red hover:border-awm-red'
                 "
                 @click="prev"
               >
@@ -154,10 +169,14 @@ const modules = [Pagination, Navigation];
                   place-items-center
                   border-awm-white border-2
                   rounded-full
-                  hover:bg-awm-red hover:border-awm-red
                   transition
                   duration-200
                   z-10
+                "
+                :class="
+                  red
+                    ? 'hover:bg-awm-navy hover:border-awm-navy'
+                    : 'hover:bg-awm-red hover:border-awm-red'
                 "
                 @click="next"
               >
