@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans]
+        futura: ["futura-pt", ...defaultTheme.fontFamily.sans],
+        elza: ["elza-text", ...defaultTheme.fontFamily.sans]
       },
       colors: {
         accent: {

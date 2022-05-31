@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-/* @import url("https://use.typekit.net/hdf2hwa.css%22"); */
 @import url("https://use.typekit.net/zqe1juh.css");
 @tailwind base;
 @tailwind components;
@@ -11,8 +9,12 @@ body {
 }
 
 /* #region - Typography -  */
-* {
-  font-family: "elza-text", sans-serif;
+*:not(.btn *) {
+  font-family: elza-text, sans-serif;
+}
+
+.btn {
+  font-family: futura-pt, sans-serif;
 }
 
 h1 {
@@ -81,9 +83,9 @@ select {
 }
 
 .btn {
-  @apply relative cursor-pointer w-max text-center inline-flex items-center justify-center border-2 border-awm-white font-semibold transition-all 
+  @apply relative cursor-pointer w-max text-center inline-flex items-center justify-center border-2 border-awm-white font-medium transition-all 
         text-awm-white focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-awm-red uppercase tracking-wide 
+        focus:ring-offset-2 focus:ring-awm-red uppercase tracking-wider 
         hover:bg-awm-red hover:border-awm-red hover:text-awm-white;
 }
 
@@ -120,7 +122,7 @@ select {
 }
 
 .btn-xl {
-  @apply text-base px-8 py-3 rounded-full sm:min-w-[13rem];
+  @apply text-lg px-8 py-3 rounded-full sm:min-w-[13rem];
 }
 
 .btn span {

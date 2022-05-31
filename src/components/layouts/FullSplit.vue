@@ -16,7 +16,7 @@ const {
   <div class="lg:py-4 overflow-hidden">
     <main class="lg:relative">
       <div
-        :class="`${leftClass} mx-auto max-w-7xl py-8 lg:py-16 lg:flex ${
+        :class="`${leftClass ?? ''} mx-auto max-w-7xl py-8 lg:py-16 lg:flex ${
           flipped && 'justify-end'
         }
       `"
@@ -30,11 +30,12 @@ const {
       </div>
       <div
         :class="`
-        ${rightClass}
+        ${rightClass ?? ''}
         relative
         w-full
         h-72
-        lg:h-96
+        lg:min-h-[24rem]
+        lg:h-full
         lg:absolute lg:inset-y-0 ${
           flipped
             ? `lg:left-0 ${spacing && 'lg:translate-x-[-0.5rem]'}`

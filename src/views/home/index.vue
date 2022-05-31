@@ -14,6 +14,7 @@
     alt=""
     aria-hidden="true"
   />
+
   <Container>
     <h1 class="leading-tight">
       <span> Lorem ipsum dolor sit. </span> <br />
